@@ -22,7 +22,7 @@ const SvgComponent = (
       gsap.fromTo(
         textRef.current,
         { y: 0 },
-        { y: isMobile ? 20 : 35, x: isMobile? -1.5 : -4, letterSpacing: isMobile ? ".402313px" : "0.6px", duration: 2, delay: 4 }
+        { y: isMobile ? 20 : 35, x: isMobile? -1.5 : -4, letterSpacing: isMobile ? ".402313px" : "0.6px", duration: 2, delay: 1 }
               // letterSpacing: ".214312px",
       );
     }
@@ -34,14 +34,14 @@ const SvgComponent = (
         y: isMobile ? 64 : 60,
         ease: "power1.inOut",
         morphSVG: `M99.552,213.054 L320.552,213.054`,
-        delay: 4,
+        delay: 1,
       });
     }
 
     if(textRef2.current){
       gsap.to(textRef2.current,{
         scale: isMobile ? 0.8 : 1,
-        delay:4,
+        delay: 1.5,
       });
     }
 
@@ -51,13 +51,13 @@ const SvgComponent = (
         scale: isMobile ? 1 : 1.5,
         opacity:1,
         duration: 2,
-        delay: 4,
+        delay: 0,
       });
       gsap.to(svgRef.current, {
         y: isMobile ? 80 : -800,
         scale: isMobile ? 1.1 : 4,
         duration: 1,
-        delay: 6,
+        delay: 3,
       });
     }
 
