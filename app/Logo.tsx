@@ -22,8 +22,7 @@ const SvgComponent = (
       gsap.fromTo(
         textRef.current,
         { y: 0 },
-        { y: isMobile ? 20 : 35, x: isMobile? -1.5 : -4, letterSpacing: isMobile ? ".402313px" : "0.6px", duration: 2, delay: 1 }
-              // letterSpacing: ".214312px",
+        { y: isMobile ? 20 : 35, x: isMobile? -1.5 : 0, letterSpacing: isMobile ? ".402313px" : "0.6px", duration: 2, delay: 1 }
       );
     }
 
@@ -42,6 +41,7 @@ const SvgComponent = (
       gsap.to(textRef2.current,{
         scale: isMobile ? 0.8 : 1,
         delay: 1.5,
+        letterSpacing: isMobile ? ".214312px" : "0.6px",
       });
     }
 
@@ -78,9 +78,9 @@ const SvgComponent = (
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       xmlSpace="preserve"
-      width={230.296}
-      height={500.481}
-      viewBox="0 0 60.932 67.596"
+      width={300.296}
+      height={600.481}
+      viewBox="-15 -15 90.932 97.596"
       opacity="0"
       {...props}
     >
@@ -233,7 +233,7 @@ const SvgComponent = (
             style={{
               fontSize: "4.56987px",
               lineHeight: 0,
-              letterSpacing: ".402313px",
+              letterSpacing: ".202313px",
               fill: "#2a2a2a",
               fillOpacity: 1,
               stroke: "none",
