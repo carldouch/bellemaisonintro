@@ -22,15 +22,15 @@ const SvgComponent = (
       gsap.fromTo(
         textRef.current,
         { y: 0 },
-        { y: isMobile ? 20 : 35, x: isMobile? -1.5 : 0, letterSpacing: isMobile ? ".402313px" : "0.6px", duration: 2, delay: 1 }
+        { y: isMobile ? 20 : 35, x: isMobile? -1.8 : 0.8, letterSpacing: isMobile ? ".402313px" : "0.6px", duration: 2, delay: 1 }
       );
     }
 
     if (holderRef.current) {
       gsap.to(holderRef.current, {
         duration: 2,
-        x: isMobile ? 10 : 0,
-        y: isMobile ? 64 : 60,
+        x: isMobile ? 7.4 : -2.2,
+        y: isMobile ? 64 : 45,
         ease: "power1.inOut",
         morphSVG: `M99.552,213.054 L320.552,213.054`,
         delay: 1,
@@ -39,7 +39,7 @@ const SvgComponent = (
 
     if(textRef2.current){
       gsap.to(textRef2.current,{
-        scale: isMobile ? 0.8 : 1,
+        scale: isMobile ? 0.8 : 1.2,
         delay: 1.5,
         letterSpacing: isMobile ? ".214312px" : "0.6px",
       });
@@ -369,7 +369,7 @@ const SvgComponent = (
               strokeWidth: 0.242157,
             }}
           >
-            {" BELLE MAISON"}
+            {"BELLE MAISON"}
           </textPath>
         </text>
         <path
