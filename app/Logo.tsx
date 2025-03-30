@@ -16,6 +16,9 @@ const SvgComponent = (
   const contourRef = useRef(null)
 
   useEffect(() => {
+    // Désactiver le défilement
+    document.body.style.overflow = "hidden";
+    
     const isMobile = window.innerWidth <= 768;
 
     if (textRef.current) {
@@ -55,7 +58,7 @@ const SvgComponent = (
       });
       gsap.to(svgRef.current, {
         y: isMobile ? 0 : -800,
-        scale: isMobile ? 1.1 : 4,
+        scale: isMobile ? 1 : 4,
         duration: 1,
         delay: 3,
       });
@@ -63,13 +66,18 @@ const SvgComponent = (
 
     if(contourRef.current){
       gsap.to(contourRef.current, {
-        duration: 2,
+        duration: 1,
         opacity:0,
         ease: "power1.inOut",
-        delay: 5,
+        delay: 2,
       });
 
     }
+
+    // Nettoyage lors du démontage du composant
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, []);
 
   return (
